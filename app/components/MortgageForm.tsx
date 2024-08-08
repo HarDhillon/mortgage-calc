@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { RadioGroup } from "./RadioGroup"
-import Form from "./Form"
+import Input from "./Input"
 
 const radioItems: { value: string, label: string }[] = [
     { value: 'Repayment', label: 'Repayment' },
@@ -44,9 +44,9 @@ const MortgageForm = () => {
             </header>
             <form>
 
-                <Form onChange={handleFormChange} label="Mortgage Ammount" value={formState.mortgageAmmount} name="mortgageAmmount" type="number" placeholder="5000" ></Form>
-                <Form onChange={handleFormChange} label="Mortgage Term" value={formState.mortgageTerm} name="mortgageTerm" type="number" placeholder="25"></Form>
-                <Form onChange={handleFormChange} label="Interest Rate" value={formState.interestRate} name="interestRate" type="number" placeholder="5.25" ></Form>
+                <Input onChange={handleFormChange} label="Mortgage Ammount" value={formState.mortgageAmmount} name="mortgageAmmount" type="number" placeholder="5000" ></Input>
+                <Input onChange={handleFormChange} label="Mortgage Term" value={formState.mortgageTerm} name="mortgageTerm" type="number" placeholder="25"></Input>
+                <Input onChange={handleFormChange} label="Interest Rate" value={formState.interestRate} name="interestRate" type="number" placeholder="5.25" ></Input>
                 
 
                 {/* <label>Mortgage Amount</label>
@@ -61,7 +61,7 @@ const MortgageForm = () => {
                 
                 <RadioGroup name="mortgage-type" items={radioItems} value={mortgageType} onChange={setMortgageType} legend="Mortgage Type"></RadioGroup>
 
-                <button className="bg-[#d7da2f] px-4 py-2 rounded-full" type="submit">Calculate Repaymnets</button>
+                <button className="bg-[#d7da2f] px-4 py-2 rounded-full">Calculate Repaymnets</button>
 
             </form>
         </section>

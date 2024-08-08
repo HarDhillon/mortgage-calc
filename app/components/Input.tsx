@@ -1,4 +1,4 @@
-interface FormProps {
+interface InputProps {
     type: string,
     label: string,
     name: string,
@@ -11,7 +11,7 @@ interface FormProps {
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const Form = ({value, label, type, max, min, name, icon, iconPosition, placeholder, onChange}:FormProps) => {
+const Input = ({value, label, type, max, min, name, icon, iconPosition, placeholder, onChange}:InputProps) => {
 
     return (
         <>
@@ -26,4 +26,4 @@ const Form = ({value, label, type, max, min, name, icon, iconPosition, placehold
     )
 }
 
-export default Form
+export default Input
