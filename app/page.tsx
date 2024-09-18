@@ -29,7 +29,9 @@ export default function Home() {
           mortgageTerm: '',
           interestRate: ''
       })
-      setMortgageType(null)
+    setMortgageType(null)
+    setMonthlyPayment(0)
+    setTotalPayment(0)
   }
 
   const calculateRepayments = (event: React.FormEvent) => {
